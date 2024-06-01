@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{tabularray}
+
+\begin{document}
+
+\begin{table}
+\centering
+\begin{tblr}{
+  width = \linewidth,
+  colspec = {Q[65]Q[112]Q[171]Q[294]Q[294]},
+  cells = {c},
+  cell{3}{1} = {r=4}{},
+  cell{7}{1} = {r=4}{},
+  cell{11}{1} = {r=4}{},
+  hline{1,15} = {-}{0.08em},
+  hline{3} = {-}{0.05em},
+  hline{7,11} = {-}{},
+}
+     &         & Bertscore F1      & {Sentence Transformer:\\all-MiniLM-L6-v2} & {Sentence Transformer:\\all-mpnet-base-v2} \\
+shot & model   &                   &                                           &                                            \\
+zero & Llama2  & 0.884406          & 0.850557                                  & 0.876578                                   \\
+     & Llama3  & 0.890517          & \textbf{0.863075}                         & 0.865484                                   \\
+     & Gemma   & 0.886257          & 0.834619                                  & 0.844038                                   \\
+     & Mistral & \textbf{0.891449} & 0.861559                                  & \textbf{0.879534}                          \\
+one  & Llama2  & 0.889834          & 0.882487                                  & 0.896759                                   \\
+     & Llama3  & \textbf{0.899919} & \textbf{0.898999}                         & \textbf{0.915387}                          \\
+     & Gemma   & 0.890054          & 0.855074                                  & 0.867683                                   \\
+     & Mistral & 0.890802          & 0.887662                                  & 0.906978                                   \\
+five & Llama2  & 0.895673          & 0.891253                                  & 0.901617                                   \\
+     & Llama3  & \textbf{0.905283} & \textbf{0.906775}                         & \textbf{0.915764}                          \\
+     & Gemma   & 0.899033          & 0.873560                                  & 0.893781                                   \\
+     & Mistral & 0.902221          & 0.891859                                  & 0.915344                                   
+\end{tblr}
+\end{table}
+\end{document}
