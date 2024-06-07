@@ -1,3 +1,4 @@
+```
 Joke_explanation_evaluation/
 │
 ├── evaluation.ipynb            # evaluate the explanations with bert score and sentence transformers
@@ -27,3 +28,4 @@ Joke_explanation_evaluation/
 │   ├── median_table.csv        # Median scores in CSV format
 │   ├── median_table.pdf        # Median scores in PDF format
 │   └── median_table.tex        # Median scores in LaTeX format
+```
