@@ -1,0 +1,5 @@
+,zero-shot,one-shot,five-shot
+Llama2,0.76,0.84,0.86
+Llama3,0.84,0.88,0.94
+Gemma,0.72,0.78,0.84
+Mistral,0.86,0.86,0.9
