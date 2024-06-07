@@ -1,0 +1,26 @@
+\documentclass{article}
+\usepackage{color}
+\usepackage{tabularray}
+
+\begin{document}
+
+\begin{table}
+\centering
+\begin{tblr}{
+  width = \linewidth,
+  colspec = {Q[320]Q[500]Q[500]},
+  row{4} = {c},
+  cell{1}{1} = {c},
+  cell{2}{1} = {c},
+  cell{3}{1} = {c},
+  hlines,
+  vline{2-3} = {-}{},
+  hline{1,5} = {-}{0.08em},
+}
+Joke                                                         & Q: How do you make a fire with two sticks? A: Make sure one of them is a match!                                                                                                                                                                                                                                                                                                                                                                                             & Q: What do you call a bear with no ears? A: B!                                                                                                                                                                                                                                                                                                                                                                                               \\
+Ground-truth Explanation                                     & The joke plays on the dual meaning of the word 'stick.' In one sense, a stick is a piece of wood, and traditionally, rubbing two sticks together is a method to start a fire. However, the punchline redirects the expectation by using 'stick' to mean a 'matchstick,' which is commonly used to effortlessly start a fire. The humor arises from the shift in the expected method of using two pieces of ordinary wood to the surprising and literal use of a matchstick. & The joke plays on the word 'bear' by removing the letters that spell 'ear', leaving only the letter 'B'. This literal interpretation of removing 'ears' from 'bear' results in a humorous, unexpected answer.                                                                                                                                                                                                                                \\
+Llama3: zero-shot                                            & This joke plays on the expectation of a typical question about how to make a fire with two sticks, which would typically involve using the sticks to create a spark or ignite a flame. However, the punchline 'Make sure one of them is a match!' subverts this expectation by using a literal match, which is a small stick used to ignite fires, in a clever and humorous way.                                                                                            & The joke relies on a play on words, where the question sets up the expectation that the answer will be a word or phrase that describes a bear with no ears. Instead, the answer 'B!' is a pun, as 'B' is a common abbreviation for 'bear', but it sounds like the phrase 'be quiet' or 'be still', implying that the bear has no ears because it is silent or unable to hear. The unexpected twist on the expected answer creates the humor. \\
+{Sentence Transformer:\\all-MiniLM-L6-v2\\Cosine Similarity} & 0.752108037                                                                                                                                                                                                                                                                                                                                                                                                                                                                 & 0.872227192                                                                                                                                                                                                                                                                                                                                                                                                                                  
+\end{tblr}
+\end{table}
+\end{document}

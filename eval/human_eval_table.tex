@@ -1,0 +1,22 @@
+\documentclass{article}
+\usepackage{tabularray}
+
+\begin{document}
+
+\begin{table}
+\centering
+\begin{tblr}{
+  width = \linewidth,
+  colspec = {Q[208]Q[238]Q[225]Q[219]},
+  cells = {c},
+  hline{1,6} = {-}{0.08em},
+  hline{2} = {-}{0.05em},
+}
+        & zero-shot     & one-shot      & five-shot     \\
+Llama2  & 0.76          & 0.84          & 0.86          \\
+Llama3  & 0.84          & \textbf{0.88} & \textbf{0.94} \\
+Gemma   & 0.72          & 0.78          & 0.84          \\
+Mistral & \textbf{0.86} & 0.86          & 0.90          
+\end{tblr}
+\end{table}
+\end{document}
